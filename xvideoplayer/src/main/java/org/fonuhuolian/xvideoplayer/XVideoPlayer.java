@@ -711,6 +711,10 @@ public class XVideoPlayer extends Jzvd {
         }
     }
 
+    public String setUpLazyUrl(String url) {
+        return XVideoPlayerSDK.getInstance().getCacheServer().getProxyUrl(url);
+    }
+
 
     /**
      * 设置播放过程中的回调
