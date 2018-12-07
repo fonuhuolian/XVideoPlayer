@@ -38,4 +38,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     api 'cn.jzvd:jiaozivideoplayer:6.4.1'
     api 'com.github.rubensousa:gravitysnaphelper:1.5'
+    api 'com.danikula:videocache:2.7.1'
 }
