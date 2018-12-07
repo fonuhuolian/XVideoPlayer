@@ -26,10 +26,13 @@ public class Adapter extends SimpleSingleLayoutAdapter<String> {
 
         // 查找控件
         XVideoPlayer xVideoPlayer = (XVideoPlayer) var1.getView(R.id.videoplayer);
-        // 装载视频地址
-        xVideoPlayer.setUp(var2, "", JzvdStd.SCREEN_WINDOW_NORMAL);
+        // 装载视频地址并缓存
+        xVideoPlayer.setUp(xVideoPlayer.setUpLazyUrl(var2), "", JzvdStd.SCREEN_WINDOW_NORMAL);
         // 裁剪视频
         Jzvd.setVideoImageDisplayType(Jzvd.VIDEO_IMAGE_DISPLAY_TYPE_FILL_SCROP);
+        // 显示预览图
+        // Glide.with(this).load("img-url").into(myJzvdStd.thumbImageView);
+
         // 设置监听
         xVideoPlayer.setVideoAllCallBack(new XVideoCallBack() {
 
@@ -61,6 +64,7 @@ public class Adapter extends SimpleSingleLayoutAdapter<String> {
             @Override
             public void onStateAutoComplete() {
 
+                // 通知播放下一个
                 if (getAttachDatas().size() - 1 > var3) {
                     EventBus.getDefault().post(new NextPosition(var3 + 1));
                 }
