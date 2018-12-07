@@ -45,9 +45,6 @@ public class MainActivity extends AppCompatActivity {
         list.add("http://www.ourpyw.com/upload/20181205/154399085578508075922575855313.mp4");
         list.add("http://www.ourpyw.com/upload/20181205/1543990692461030433433965425194.mp4");
         list.add("http://www.ourpyw.com/upload/20181205/154397866116907221827780702329.mp4");
-        list.add("http://www.ourpyw.com/upload/20181203/154380717277607623449884568022.mp4");
-        list.add("http://www.ourpyw.com/upload/20181203/1543807138228020930936626187435.mp4");
-        list.add("http://www.ourpyw.com/upload/20181203/154380658284009704644504022873.mp4");
         // 装载到适配器
         recyclerView.setAdapter(adapter);
         adapter.addData(list);
@@ -66,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }).attachToRecyclerView(recyclerView);
 
-//        显示预览图
-//        Glide.with(this).load("http://jzvd-pic.nathen.cn/jzvd-pic/1bb2ebbe-140d-4e2e-abd2-9e7e564f71ac.png").into(myJzvdStd.thumbImageView);
     }
 
 
